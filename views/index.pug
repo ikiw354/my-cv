@@ -19,7 +19,7 @@ html
       .container
         a.navbar-brand.fw-bold(href="#")
           span.text-info Muhammad
-          |  Rizki Amal
+          |  Rizki
 
         button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav")
           span.navbar-toggler-icon
@@ -113,30 +113,61 @@ block content
                 h5= skill
 
 
-  // 🔥 PROJECTS (HOVER CARD)
-  section#project
-    .container
-      h2.text-center.mb-5 Projects
+  // 🔥 PROJECTS (ADVANCED)
+section#project
+  .container
+    h2.text-center.mb-5 Projects
 
-      .row
-        .col-md-4.mb-4
-          .card.project-card.bg-dark.text-white
-            .card-body
-              h5 Smart Home IoT
-              p Kontrol rumah menggunakan ESP32 berbasis IoT
+    .row
+      // PROJECT 1
+      .col-md-4.mb-4
+        .card.project-card.bg-dark.text-white.h-100
+          img.card-img-top(src="/images/kos kosan.png", alt="project")
+          .card-body
+            h5 Website Management Kost
+            p Website manajemen kost yang memudahkan pemilik dalam mengelola kamar, penghuni, serta memantau pembayaran dan laporan keuangan secara praktis dalam satu tampilan.
 
-        .col-md-4.mb-4
-          .card.project-card.bg-dark.text-white
-            .card-body
-              h5 Website CV
-              p Dibangun dengan Express & Pug
+            .mb-3
+              span.badge.bg-info.text-dark.me-1 MySQL
+              span.badge.bg-info.text-dark.me-1 HTML
+              span.badge.bg-info.text-dark JavaScript
+              span.badge.bg-info.text-dark Bootstrap
 
-        .col-md-4.mb-4
-          .card.project-card.bg-dark.text-white
-            .card-body
-              h5 Automation Workflow
-              p Automasi proses menggunakan n8n
+            a.btn.btn-sm.btn-outline-info.me-2(href="#") Demo
+            a.btn.btn-sm.btn-info.text-dark(href="#") GitHub
 
+      // PROJECT 2
+      .col-md-4.mb-4
+        .card.project-card.bg-dark.text-white.h-100
+          img.card-img-top(src="/images/Foto website cv.png", alt="project")
+          .card-body
+            h5 Website CV
+            p Dibangun menggunakan Express & Pug
+
+            .mb-3
+              span.badge.bg-info.text-dark.me-1 Node.js
+              span.badge.bg-info.text-dark.me-1 Express
+              span.badge.bg-info.text-dark Pug
+
+            a.btn.btn-sm.btn-outline-info.me-2(href="#") Demo
+            a.btn.btn-sm.btn-info.text-dark(href="#") GitHub
+
+      // PROJECT 3
+      .col-md-4.mb-4
+        .card.project-card.bg-dark.text-white.h-100
+          img.card-img-top(src="/images/automatic.webp", alt="project")
+          .card-body
+            h5 Automation Workflow
+            p Automasi workflow menggunakan n8n
+
+            .mb-3
+              span.badge.bg-info.text-dark.me-1 n8n
+              span.badge.bg-info.text-dark.me-1 Automation
+              span.badge.bg-info.text-dark.me-1 Telegram 
+              span.badge.bg-info.text-dark.me-1 Spreedsheet 
+
+            a.btn.btn-sm.btn-outline-info.me-2(href="#") Demo
+            a.btn.btn-sm.btn-info.text-dark(href="#") GitHub
 
   // 🔥 CONTACT (UPGRADED)
 section#contact
@@ -166,12 +197,18 @@ section#contact
 
             // 🔥 SOCIAL MEDIA
             .d-flex.justify-content-center.gap-4.mt-3
-              a.text-white.fs-4(href="#")
+              a.text-white.fs-4(href="www.linkedin.com/in/muhammad-rizki-romadhon-2b352b3a7")
                 i.bi.bi-linkedin
-              a.text-white.fs-4(href="#")
+              a.text-white.fs-4(href="https://t.me/Rizki R" target="_blank")
                 i.bi.bi-telegram 
               a.text-white.fs-4(href="https://www.instagram.com/rzkiromadhon/")
                 i.bi.bi-instagram
-              a.text-white.fs-4(href="#")
-                i.bi.bi-whatsapp 
+              a.text-white.fs-4(href="https://wa.me/6289657190114" target="_blank")
+                i.bi.bi-whatsapp
                 
+              body.d-flex.flex-column.min-vh-100
+  main.flex-fill
+    // semua isi website kamu di sini
+
+  footer.bg-dark.text-white.text-center.py-3
+    p.mb-0 © 2026 Copyright
