@@ -92,3 +92,50 @@ h2 {
 .badge {
   font-size: 12px;
 }
+
+
+/* PROFILE IMAGE */
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,255,213,0.15);
+  transition: 0.4s ease;
+}
+
+/* GLOW EFFECT */
+.profile-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: linear-gradient(45deg, #00ffd5, transparent, #00ffd5);
+  filter: blur(20px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* HOVER EFFECT */
+.profile-img:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* TEXT SMOOTH */
+#about h1, #about p {
+  letter-spacing: 0.5px;
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 18px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,255,213,0.15);
+}

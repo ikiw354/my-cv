@@ -23,39 +23,91 @@ block content
           img(src="/images/profile.jpeg", class="img-fluid rounded-circle shadow-lg", width="500")
 
 
-  // 🔥 ABOUT (CARD STYLE)
-  section#about
-    .container
-      h2.text-center.mb-5 About Me
+  // 🔥 ABOUT (FRAMER STYLE - IMAGE LEFT)
+  section#about.py
+  .container
 
-      .row.justify-content-center
-        .col-md-8
-          .card.bg-dark.text-white.shadow
-            .card-body.p-4
-              p
-                | Saya adalah mahasiswa informatika yang memiliki passion di bidang web development.
-                | Saya terbiasa membangun aplikasi menggunakan HTML, CSS, JavaScript, dan Node.js.
+    .row.align-items-center.g-5
 
-              p
-                | Saya juga memiliki pengalaman membuat project seperti Smart Home IoT,
-                | Website CV, dan automation workflow menggunakan n8n.
+      // IMAGE (KIRI)
+      .col-md-6.text-center
+        .profile-wrapper
+          img.profile-img(
+            src="/images/about me.jpeg"
+            alt="Profile"
+          )
+
+      // TEXT (KANAN)
+      .col-md-6
+        h1.text-white.fw-bold.mb-3(style="font-size:2.5rem;")
+          | About
+          span(style="color:#00ffd5;") Me
+
+        p.text-light.mb-4(style="opacity:.8;")
+          | Mahasiswa Informatika yang fokus pada 
+          strong Web Development
+          | . Saya membangun website modern menggunakan HTML, CSS, JavaScript, dan Node.js.
+
+        p.text-light(style="opacity:.6;")
+          | Berpengalaman dalam membuat Smart Home IoT, Website CV, dan automation workflow menggunakan n8n.
+
+        // BUTTON
+        a.btn.mt-4.px-4.py-2(
+          href="#project"
+          style="background:#00ffd5; color:#000; border-radius:50px; font-weight:600;"
+        ) View Projects
 
 
-  // 🔥 SKILLS (MODERN GRID)
-  section#skill
-    .container
-      h2.text-center.mb-5 Skills
+  // 🔥 SKILLS (SAFE VERSION - NO ARRAY)
+  section#skill.py-5
+  .container
+    h2.text-center.text-white.mb-5 Skills
 
-      .row.text-center
-        each skill in ["HTML", "CSS", "JavaScript", "Node.js", "Express", "Bootstrap"]
-          .col-md-4.mb-4
-            .card.bg-dark.text-white.h-100.shadow-sm
-              .card-body
-                h5= skill
+    .row.g-4
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="0")
+        .skill-card.text-center.p-4
+          i.bi.bi-filetype-html.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white HTML
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="100")
+        .skill-card.text-center.p-4
+          i.bi.bi-filetype-css.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white CSS
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="200")
+        .skill-card.text-center.p-4
+          i.bi.bi-filetype-js.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white JavaScript
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="300")
+        .skill-card.text-center.p-4
+          i.bi.bi-hdd-network.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white Node.js
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="400")
+        .skill-card.text-center.p-4
+          i.bi.bi-box.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white Express
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="500")
+        .skill-card.text-center.p-4
+          i.bi.bi-bootstrap.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white Bootstrap
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="600")
+        .skill-card.text-center.p-4
+          i.bi.bi-bezier2.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white Figma
+
+      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="700")
+        .skill-card.text-center.p-4
+          i.bi.bi-diagram-3.fs-1.mb-3(style="color:#00ffd5")
+          h5.text-white n8n
 
 
   // 🔥 PROJECTS (ADVANCED)
-  section#project
+  section#project.py-5
     .container
       h2.text-center.mb-5 Projects
 
