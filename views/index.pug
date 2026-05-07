@@ -1,15 +1,18 @@
 extends layout 
 
 block content
-  .pt-5.mt-4
+  .pt-1.mt-4
   section#hero.d-flex.align-items-center
     .container
       .row.align-items-center
 
         .col-md-6.text-md-start.text-center
-          h1.display-3.fw-bold
-            | Hai Saya Muhammad Rizki 👋
-          p.lead.text-secondary Web Developer | Mahasiswa Informatika
+          h1.display-3.fw-bold(
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          )
+            | Hai, Saya Muhammad Rizki 
+          p.lead.text-secondary Fullstack Web Developer | Mahasiswa Informatika
 
           p.mt-3
             | Saya fokus membangun website modern, responsive, dan user-friendly
@@ -19,7 +22,9 @@ block content
             a.btn.btn-info.text-dark.me-2(href="#project") Lihat Project
             a.btn.btn-outline-light(href="#contact") Hubungi Saya
 
-        .col-md-6.text-center
+        .col-md-6.text-center(
+          data-aos="fade-left"
+        )
           img(src="/images/profile.jpeg", class="img-fluid rounded-circle shadow-lg", width="500")
 
 
@@ -30,7 +35,9 @@ block content
     .row.align-items-center.g-5
 
       // IMAGE (KIRI)
-      .col-md-6.text-center
+      .col-md-6.text-center(
+        data-aos="fade-up-right"
+      )
         .profile-wrapper
           img.profile-img(
             src="/images/about me.jpeg"
@@ -58,109 +65,9 @@ block content
         ) View Projects
 
 
-  // 🔥 SKILLS (SAFE VERSION - NO ARRAY)
-  section#skill.py-5
-  .container
-    h2.text-center.text-white.mb-5 Skills
+  include components/skill 
 
-    .row.g-4
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="0")
-        .skill-card.text-center.p-4
-          i.bi.bi-filetype-html.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white HTML
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="100")
-        .skill-card.text-center.p-4
-          i.bi.bi-filetype-css.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white CSS
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="200")
-        .skill-card.text-center.p-4
-          i.bi.bi-filetype-js.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white JavaScript
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="300")
-        .skill-card.text-center.p-4
-          i.bi.bi-hdd-network.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white Node.js
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="400")
-        .skill-card.text-center.p-4
-          i.bi.bi-box.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white Express
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="500")
-        .skill-card.text-center.p-4
-          i.bi.bi-bootstrap.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white Bootstrap
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="600")
-        .skill-card.text-center.p-4
-          i.bi.bi-bezier2.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white Figma
-
-      .col-md-4.col-lg-3(data-aos="fade-up" data-aos-delay="700")
-        .skill-card.text-center.p-4
-          i.bi.bi-diagram-3.fs-1.mb-3(style="color:#00ffd5")
-          h5.text-white n8n
-
-
-  // 🔥 PROJECTS (ADVANCED)
-  section#project.py-5
-    .container
-      h2.text-center.mb-5 Projects
-
-      .row
-        // PROJECT 1
-        .col-md-4.mb-4
-          .card.project-card.bg-dark.text-white.h-100
-            img.card-img-top(src="/images/kos kosan.png", alt="project")
-            .card-body
-              h5 Website Management Kost
-              p Website manajemen kost yang memudahkan pemilik dalam mengelola kamar, penghuni, serta memantau pembayaran dan laporan keuangan secara praktis dalam satu tampilan.
-
-              .mb-3
-                span.badge.bg-info.text-dark.me-1 MySQL
-                span.badge.bg-info.text-dark.me-1 HTML
-                span.badge.bg-info.text-dark JavaScript
-                span.badge.bg-info.text-dark Bootstrap
-
-              a.btn.btn-sm.btn-outline-info.me-2(href="#") Demo
-              a.btn.btn-sm.btn-info.text-dark(href="#") GitHub
-
-        // PROJECT 2
-        .col-md-4.mb-4
-          .card.project-card.bg-dark.text-white.h-100
-            img.card-img-top(src="/images/Foto website cv.png", alt="project")
-            .card-body
-              h5 Website CV
-              p Dibangun menggunakan Express & Pug
-
-              .mb-3
-                span.badge.bg-info.text-dark.me-1 Node.js
-                span.badge.bg-info.text-dark.me-1 Express
-                span.badge.bg-info.text-dark Pug
-
-              a.btn.btn-sm.btn-outline-info.me-2(href="#") Demo
-              a.btn.btn-sm.btn-info.text-dark(href="#") GitHub
-
-        // PROJECT 3
-        .col-md-4.mb-4
-          .card.project-card.bg-dark.text-white.h-100
-            img.card-img-top(src="/images/automatic.webp", alt="project")
-            .card-body
-              h5 Automation Workflow
-              p Automasi workflow menggunakan n8n
-
-              .mb-3
-                span.badge.bg-info.text-dark.me-1 n8n
-                span.badge.bg-info.text-dark.me-1 Automation
-                span.badge.bg-info.text-dark.me-1 Telegram 
-                span.badge.bg-info.text-dark.me-1 Spreedsheet 
-
-              a.btn.btn-sm.btn-outline-info.me-2(href="#") Demo
-              a.btn.btn-sm.btn-info.text-dark(href="#") GitHub
+  include components/project
 
     // 🔥 CONTACT (UPGRADED)
   section#contact
@@ -187,15 +94,6 @@ block content
                 | Kirim Email
 
               hr
-
-              // 🔥 SOCIAL MEDIA
-              .d-flex.justify-content-center.gap-4.mt-3
-                a.text-white.fs-4(href="www.linkedin.com/in/muhammad-rizki-romadhon-2b352b3a7")
-                  i.bi.bi-linkedin
-                a.text-white.fs-4(href="https://t.me/Rizki R" target="_blank")
-                  i.bi.bi-telegram 
-                a.text-white.fs-4(href="https://www.instagram.com/rzkiromadhon/")
-                  i.bi.bi-instagram
-                a.text-white.fs-4(href="https://wa.me/6289657190114" target="_blank")
-                  i.bi.bi-whatsapp
+              include components/sosial 
+             
                   

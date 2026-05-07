@@ -9,6 +9,13 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+const config = require('./config.json');
+
+app.use((req, res, next) => {
+  res.locals.config = config;
+  next();
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -43,3 +50,4 @@ module.exports = app;
 app.listen(3001, () => {
   console.log('Server jalan di http://localhost:3001');
 });
+

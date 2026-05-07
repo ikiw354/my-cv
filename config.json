@@ -1,0 +1,27 @@
+{
+  "app": {
+    "name": "Portfolio Rizki",
+    "port": 3000
+  },
+  "profile": {
+    "name": "Hai, Saya Muhammad Rizki Romadhon",
+    "role": "Web Developer",
+    "description": "Mahasiswa informatika yang fokus pada web development."
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/muhammad-rizki-romadhon",
+    "instagram": "https://instagram.com/rzkiromadhon",
+    "whatsapp": "https://wa.me/6289657190114",
+    "telegram": "https://t.me/username"
+  },
+  "skills": [
+    { "name": "HTML", "icon": "bi-filetype-html" },
+    { "name": "CSS", "icon": "bi-filetype-css" },
+    { "name": "JavaScript", "icon": "bi-filetype-js" },
+    { "name": "Node.js", "icon": "bi-hdd-network" },
+    { "name": "Express", "icon": "bi-box" },
+    { "name": "Bootstrap", "icon": "bi-bootstrap" },
+    { "name": "Figma", "icon": "bi-bezier2" },
+    { "name": "n8n", "icon": "bi-diagram-3" }
+  ]
+}
