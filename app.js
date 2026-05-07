@@ -47,5 +47,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-
+app.listen(3001, () => {
+  console.log('Server jalan di http://localhost:3001');
+});
 
